@@ -156,7 +156,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,248,241,.93);bac
 .stats span{font-weight:700;font-size:.92rem;color:var(--ink-soft)}
 
 /* about */
-.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.about .wrap{display:block}
 .about-media{position:relative}
 .about-media .ph{aspect-ratio:4/5;border-radius:var(--radius) var(--radius) 160px var(--radius);box-shadow:var(--shadow)}
 .about-media:before{content:"";position:absolute;inset:22px -22px -22px 22px;border-radius:var(--radius) var(--radius) 160px var(--radius);background:var(--sun);opacity:.5;z-index:-1}
@@ -250,6 +250,115 @@ footer a:hover{color:var(--sun)}
 .copy{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;font-size:.84rem}
 .copy a{color:#fff;font-weight:700}
 
+
+/* rooms (tabs) */
+.rooms{background:#fff}
+.rooms-head{max-width:720px;margin-bottom:44px}
+.rooms-head h2{font-size:clamp(2.2rem,4.8vw,3.6rem);margin-bottom:14px}
+.rooms-head em{color:var(--coral)}
+.rooms-head p{color:var(--ink-soft);font-size:1.06rem}
+.rooms-body{display:grid;grid-template-columns:.8fr 1.4fr;gap:40px;align-items:start}
+.tabs{display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}
+.tab{display:flex;align-items:baseline;gap:18px;text-align:left;background:none;border:0;border-bottom:1.5px solid var(--line);padding:22px 6px;font:inherit;font-family:'DM Serif Display',serif;font-size:1.65rem;color:var(--ink-soft);cursor:pointer;transition:.25s}
+.tab span{font-family:'Manrope',sans-serif;font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--coral)}
+.tab:hover{color:var(--ink);padding-left:14px}
+.tab.on{color:var(--ink);padding-left:14px;border-bottom-color:var(--coral);box-shadow:inset 4px 0 0 var(--coral)}
+.panel-wrap{position:relative}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:28px;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;animation:fade .45s ease}
+.panel.on{display:grid}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .ph{min-height:340px}
+.pc{padding:34px 32px 30px 0}
+.pc h3{font-size:1.9rem;margin-bottom:8px}
+.pc p{color:var(--ink-soft);margin-bottom:16px}
+.checks.sm{margin:0;gap:10px}
+.checks.sm li{font-weight:600;font-size:.95rem}
+.checks.sm .i{width:22px;height:22px;padding:4px}
+.panel-cta{margin-top:20px}
+
+/* record ledger */
+.record{background:var(--cream)}
+.record-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.record-lead{position:sticky;top:120px}
+.bignum{font-family:'DM Serif Display',serif;font-size:clamp(7rem,16vw,12rem);line-height:.85;color:var(--coral);margin:6px 0 18px}
+.bignum sup{font-size:.4em;vertical-align:top;position:relative;top:.1em}
+.record-lead h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+.ledger{list-style:none;border-top:1.5px solid var(--ink)}
+.ledger li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ledger .yr{font-family:'DM Serif Display',serif;font-size:2.3rem;color:var(--coral);line-height:1}
+.ledger .yr small{display:block;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+.ledger h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:4px;letter-spacing:0}
+.ledger p{color:var(--ink-soft);font-size:.96rem}
+
+/* about with pull quote */
+.about{background:#fff}
+.pull{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.15;max-width:1000px;margin:0 auto 70px;text-align:center;color:var(--ink)}
+.about-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about-media{position:relative}
+.about-media .ph{aspect-ratio:4/5;border-radius:200px 200px var(--radius) var(--radius);box-shadow:var(--shadow)}
+.about-media .tag{position:absolute;right:-18px;bottom:30px;background:var(--ink);color:#fff;padding:16px 22px;border-radius:16px;box-shadow:var(--shadow)}
+.about-media .tag b{display:block;font-family:'DM Serif Display',serif;font-weight:400;font-size:1.3rem}
+.about-media .tag span{font-size:.78rem;color:#b4c0d6;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.about-text h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:16px}
+.about-text p{color:var(--ink-soft);margin-bottom:14px}
+.about-text .btn{margin-top:10px}
+
+/* promise rows */
+.promise{background:var(--ink);color:#fff;padding:90px 0}
+.promise .eyebrow{color:var(--sun)}
+.promise .eyebrow:before{background:var(--sun)}
+.prom-list{list-style:none;margin-top:10px}
+.prom-list li{display:flex;align-items:baseline;justify-content:space-between;gap:30px;padding:30px 0;border-bottom:1px solid rgba(255,255,255,.18);transition:.3s}
+.prom-list li:first-child{border-top:1px solid rgba(255,255,255,.18)}
+.prom-list b{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(2.3rem,6.4vw,5rem);line-height:1;transition:.3s}
+.prom-list span{max-width:330px;color:#b4c0d6;text-align:right}
+.prom-list li:hover b{color:var(--sun);transform:translateX(12px)}
+
+/* giving split */
+.giving{padding:0;background:var(--coral)}
+.giving-split{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.giv-photo{min-height:360px;border-radius:0;background:linear-gradient(135deg,#f6a79a,#ffd7a0)}
+.giv-text{color:#fff;padding:72px max(32px,calc((100vw - 1180px)/2 + 20px)) 72px 64px;display:flex;flex-direction:column;justify-content:center}
+.giv-text .eyebrow{color:#fff}
+.giv-text .eyebrow:before{background:#fff}
+.giv-text h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:16px}
+.giv-text p{color:#ffe9e4;max-width:480px;font-size:1.08rem}
+
+/* review bar */
+.reviews{background:var(--sky);padding:56px 0}
+.rev-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.rev-bar h2{font-size:clamp(1.6rem,3vw,2.3rem);flex:1;min-width:240px}
+.rev-bar .rev-stars{margin:0}
+
+@media (max-width:1080px){
+  .rooms-body,.record-grid,.about-split{grid-template-columns:1fr;gap:36px}
+  .record-lead{position:static}
+  .tabs{flex-direction:row;overflow-x:auto;border-top:0;gap:10px;padding-bottom:6px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none;border:1.5px solid var(--line);border-radius:999px;padding:12px 20px;font-size:1.05rem;white-space:nowrap;background:var(--cream)}
+  .tab:hover,.tab.on{padding-left:20px;box-shadow:none}
+  .tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .tab.on span{color:var(--sun)}
+  .about-media{max-width:440px}
+  .giving-split{grid-template-columns:1fr}
+  .giv-text{padding:52px 32px}
+}
+@media (max-width:820px){
+  .panel{grid-template-columns:1fr;gap:0}
+  .panel .ph{min-height:220px}
+  .pc{padding:26px 22px}
+  .panel-cta{width:100%}
+  .ledger li{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .pull{margin-bottom:44px}
+  .about-media .tag{right:8px}
+  .promise{padding:60px 0}
+  .prom-list li{flex-direction:column;gap:10px;padding:24px 0}
+  .prom-list span{text-align:left;max-width:none}
+  .giv-text{padding:44px 20px}
+  .rev-btns .btn{width:100%}
+  .rev-btns{width:100%}
+}
+
 .mbar{display:none}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
@@ -259,7 +368,7 @@ footer a:hover{color:var(--sun)}
   section{padding:70px 0}
   .nav ul{gap:18px}
   .nav .login{display:none}
-  .hero-grid,.about .wrap,.contact .wrap,.faq-wrap{grid-template-columns:1fr;gap:54px}
+  .hero-grid,.contact .wrap,.faq-wrap{grid-template-columns:1fr;gap:54px}
   .stack{max-width:540px;margin-inline:auto;width:100%}
   .svc-grid,.mini-grid{grid-template-columns:repeat(2,1fr)}
   .award-grid,.stats{grid-template-columns:repeat(2,1fr)}
@@ -391,149 +500,125 @@ footer a:hover{color:var(--sun)}
   </div>
 </section>
 
-<!-- AWARDS MARQUEE -->
-<div class="marq" aria-label="Awards and accreditations">
-  <div class="marq-track">
-    <span><svg class="i"><use href="#i-trophy"/></svg> Consumer Choice Award, 24th consecutive year</span>
-    <span><svg class="i"><use href="#i-shield"/></svg> BBB Accredited, A+ rated</span>
-    <span><svg class="i"><use href="#i-award"/></svg> BBB Longstanding Accreditation Award, 2025</span>
-    <span><svg class="i"><use href="#i-star"/></svg> Calgary Herald-Sun Readers' Choice, 8 time winner</span>
-    <span><svg class="i"><use href="#i-trophy"/></svg> Consumer Choice Award, 24th consecutive year</span>
-    <span><svg class="i"><use href="#i-shield"/></svg> BBB Accredited, A+ rated</span>
-    <span><svg class="i"><use href="#i-award"/></svg> BBB Longstanding Accreditation Award, 2025</span>
-    <span><svg class="i"><use href="#i-star"/></svg> Calgary Herald-Sun Readers' Choice, 8 time winner</span>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
+<!-- ROOM BY ROOM -->
+<section id="services" class="rooms">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="rooms-head rv">
       <span class="eyebrow">Our Services</span>
-      <h2>Cleaning that fits your home and your schedule</h2>
-      <p>Tell us what you need and we will tailor the clean. Call for a free estimate, no pressure.</p>
+      <h2>We clean it <em>room by room.</em></h2>
+      <p>Pick a space to see what we take care of. Every home is different, so call for a free estimate that fits yours.</p>
     </div>
-    <div class="svc-grid">
-      <article class="svc rv">
-        <div class="ph"><img src="images/service-regular.jpg" alt="Cleaner tidying a bright living room" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Regular House Cleaning</h3>
-          <p>Recurring visits from a team that knows your home, so it stays fresh between every visit.</p>
-          <a class="more" href="#contact">Get an estimate <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-      <article class="svc rv">
-        <div class="ph"><img src="images/service-deep.jpg" alt="Gleaming kitchen after a deep clean" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Deep Cleaning</h3>
-          <p>A top to bottom reset for kitchens, bathrooms and every room in between.</p>
-          <a class="more" href="#contact">Get an estimate <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-      <article class="svc rv">
-        <div class="ph"><img src="images/service-move.jpg" alt="Empty clean room ready for move in" loading="lazy" onerror="this.remove()"></div>
-        <div class="body">
-          <h3>Move In and Move Out</h3>
-          <p>Leave your old place spotless or start fresh in your new one, without the stress.</p>
-          <a class="more" href="#contact">Get an estimate <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-    </div>
-    <div class="mini-grid">
-      <div class="mini rv"><span class="ic"><svg><use href="#i-calendar"/></svg></span><div><h3>One-Time Cleaning</h3><p>A single visit when you need a hand, no commitment.</p></div></div>
-      <div class="mini rv"><span class="ic"><svg><use href="#i-sun"/></svg></span><div><h3>Spring and Seasonal Refresh</h3><p>Reset your home as the seasons change.</p></div></div>
-      <div class="mini rv"><span class="ic"><svg><use href="#i-gift"/></svg></span><div><h3>Before Guests Arrive</h3><p>Get ready for holidays, parties and visitors.</p></div></div>
+    <div class="rooms-body rv">
+      <div class="tabs" role="tablist" aria-label="Cleaning services">
+        <button role="tab" class="tab on" data-t="0" aria-selected="true"><span>01</span> Kitchens</button>
+        <button role="tab" class="tab" data-t="1" aria-selected="false"><span>02</span> Bathrooms</button>
+        <button role="tab" class="tab" data-t="2" aria-selected="false"><span>03</span> Bedrooms &amp; living areas</button>
+        <button role="tab" class="tab" data-t="3" aria-selected="false"><span>04</span> Move in / move out</button>
+        <button role="tab" class="tab" data-t="4" aria-selected="false"><span>05</span> Regular visits</button>
+      </div>
+      <div class="panel-wrap">
+        <article class="panel on" data-p="0">
+          <div class="ph"><img src="images/service-deep.jpg" alt="Gleaming kitchen after a clean" loading="lazy" onerror="this.remove()"></div>
+          <div class="pc"><h3>Kitchens that shine</h3><p>The room that works hardest gets the most attention.</p>
+          <ul class="checks sm"><li><svg class="i"><use href="#i-check"/></svg>Counters and backsplash wiped</li><li><svg class="i"><use href="#i-check"/></svg>Stovetop and appliance exteriors cleaned</li><li><svg class="i"><use href="#i-check"/></svg>Sink scrubbed and polished</li><li><svg class="i"><use href="#i-check"/></svg>Floors vacuumed and mopped</li></ul></div>
+        </article>
+        <article class="panel" data-p="1">
+          <div class="ph"><img src="images/hero-2.jpg" alt="Sparkling clean bathroom" loading="lazy" onerror="this.remove()"></div>
+          <div class="pc"><h3>Bathrooms, spotless</h3><p>Fresh, sanitary and streak free.</p>
+          <ul class="checks sm"><li><svg class="i"><use href="#i-check"/></svg>Toilets, tubs and showers scrubbed</li><li><svg class="i"><use href="#i-check"/></svg>Mirrors and fixtures polished</li><li><svg class="i"><use href="#i-check"/></svg>Vanities and sinks cleaned</li><li><svg class="i"><use href="#i-check"/></svg>Floors vacuumed and mopped</li></ul></div>
+        </article>
+        <article class="panel" data-p="2">
+          <div class="ph"><img src="images/service-regular.jpg" alt="Tidy bright living room" loading="lazy" onerror="this.remove()"></div>
+          <div class="pc"><h3>Bedrooms and living areas</h3><p>Rooms that feel calm the moment you walk in.</p>
+          <ul class="checks sm"><li><svg class="i"><use href="#i-check"/></svg>Surfaces and shelves dusted</li><li><svg class="i"><use href="#i-check"/></svg>Floors and carpets vacuumed</li><li><svg class="i"><use href="#i-check"/></svg>Beds and cushions tidied</li><li><svg class="i"><use href="#i-check"/></svg>Glass and mirrors wiped</li></ul></div>
+        </article>
+        <article class="panel" data-p="3">
+          <div class="ph"><img src="images/service-move.jpg" alt="Empty clean room" loading="lazy" onerror="this.remove()"></div>
+          <div class="pc"><h3>Move in, move out</h3><p>Hand over the keys with confidence, or start fresh in your new place.</p>
+          <ul class="checks sm"><li><svg class="i"><use href="#i-check"/></svg>Empty rooms cleaned top to bottom</li><li><svg class="i"><use href="#i-check"/></svg>Kitchen and bathrooms detailed</li><li><svg class="i"><use href="#i-check"/></svg>Floors and baseboards cleaned</li><li><svg class="i"><use href="#i-check"/></svg>Ready for the next chapter</li></ul></div>
+        </article>
+        <article class="panel" data-p="4">
+          <div class="ph"><img src="images/hero-3.jpg" alt="Fresh living room with flowers" loading="lazy" onerror="this.remove()"></div>
+          <div class="pc"><h3>Regular visits</h3><p>The same friendly team, on a schedule that suits you.</p>
+          <ul class="checks sm"><li><svg class="i"><use href="#i-check"/></svg>Weekly, bi-weekly or monthly</li><li><svg class="i"><use href="#i-check"/></svg>A team that knows your home</li><li><svg class="i"><use href="#i-check"/></svg>Insured and bonded every visit</li><li><svg class="i"><use href="#i-check"/></svg>Satisfaction guaranteed</li></ul></div>
+        </article>
+        <a href="#contact" class="btn btn-coral panel-cta">Get a free estimate <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- AWARDS -->
-<section class="awards" id="awards">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Awards and Trust</span>
-      <h2>Calgary has voted for us, again and again</h2>
-      <p>Four decades of reliable service, recognized by the people and organizations Calgary trusts.</p>
+<!-- THE RECORD -->
+<section class="record" id="awards">
+  <div class="wrap record-grid">
+    <div class="record-lead rv">
+      <span class="eyebrow">The Record</span>
+      <div class="bignum">40<sup>+</sup></div>
+      <h2>years of Calgary homes, and the awards to show for it.</h2>
     </div>
-    <div class="award-grid">
-      <div class="award rv"><span class="ic"><svg><use href="#i-trophy"/></svg></span><h3>Consumer Choice Award</h3><p>Calgary's best maid service, now in our 24th consecutive year.</p></div>
-      <div class="award rv"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>BBB A+ Accredited</h3><p>Rated A+ and accredited by the Better Business Bureau.</p></div>
-      <div class="award rv"><span class="ic"><svg><use href="#i-award"/></svg></span><h3>Longstanding Accreditation</h3><p>BBB award in 2025 for 25 years of trust, performance and integrity.</p></div>
-      <div class="award rv"><span class="ic"><svg><use href="#i-star"/></svg></span><h3>Readers' Choice</h3><p>Voted best house cleaning service in Calgary by Herald-Sun readers, eight times.</p></div>
-    </div>
-    <div class="stats rv">
-      <div><b>1984</b><span>Proudly serving Calgary</span></div>
-      <div><b>A+</b><span>BBB rating</span></div>
-      <div><b>24</b><span>Years in a row, Consumer Choice</span></div>
-      <div><b>8x</b><span>Readers' Choice winner</span></div>
-    </div>
+    <ol class="ledger rv">
+      <li><span class="yr">1984</span><div><h3>Founded in Calgary</h3><p>Independent, locally owned and operated by Aaron Wyman. Never a franchise.</p></div></li>
+      <li><span class="yr">2025</span><div><h3>BBB Longstanding Accreditation Award</h3><p>Recognizing 25 years of trust, performance and integrity.</p></div></li>
+      <li><span class="yr">24th<small>year running</small></span><div><h3>Consumer Choice Award</h3><p>Best maid service in Calgary.</p></div></li>
+      <li><span class="yr">8&times;</span><div><h3>Calgary Herald-Sun Readers' Choice</h3><p>Voted best house cleaning service in Calgary.</p></div></li>
+      <li><span class="yr">A+</span><div><h3>BBB Accredited</h3><p>Rated A+ by the Better Business Bureau.</p></div></li>
+    </ol>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap">
-    <div class="about-media rv">
-      <div class="ph"><img src="images/about-team.jpg" alt="The A Maid For A Day cleaning team" loading="lazy" onerror="this.remove()"></div>
-    </div>
-    <div class="rv">
-      <span class="eyebrow">About Us</span>
-      <h2>Independent, local and proud of it</h2>
-      <p>A Maid For A Day is an independent Calgary residential cleaning company, owned and operated by Aaron Wyman. We are not a franchise. Since 1984 we have aimed for superior customer service, reliability and excellence in every home we clean.</p>
-      <p>Our staff are exceptional, and we are highly committed to the people who make that possible.</p>
-      <ul class="checks">
-        <li><svg class="i"><use href="#i-check"/></svg> Independent Calgary company, no franchise affiliation</li>
-        <li><svg class="i"><use href="#i-check"/></svg> Insured and bonded for your peace of mind</li>
-        <li><svg class="i"><use href="#i-check"/></svg> Satisfaction guaranteed on every visit</li>
-      </ul>
-      <a href="#contact" class="btn btn-coral">Talk to Our Team <svg class="i"><use href="#i-arrow"/></svg></a>
+    <blockquote class="pull rv">&ldquo;Superior customer service, reliability and a commitment to excellence are the cornerstones of our company.&rdquo;</blockquote>
+    <div class="about-split">
+      <div class="about-media rv">
+        <div class="ph"><img src="images/about-team.jpg" alt="The A Maid For A Day cleaning team" loading="lazy" onerror="this.remove()"></div>
+        <div class="tag"><b>Aaron Wyman</b><span>Owner and operator</span></div>
+      </div>
+      <div class="about-text rv">
+        <span class="eyebrow">Our Maids &amp; Our Story</span>
+        <h2>The people make the difference</h2>
+        <p>A Maid For A Day is an independent Calgary residential cleaning company, not a franchise. Our staff are exceptional, and the level of detail in their work is what sets us apart.</p>
+        <p>We are highly committed to the people who clean your home, and it shows in every visit.</p>
+        <a href="#contact" class="btn btn-line">Talk to our team <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process">
+<!-- PROMISE -->
+<section class="promise">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">How It Works</span>
-      <h2>Three easy steps to a spotless home</h2>
-    </div>
-    <div class="steps">
-      <div class="step rv"><h3>Call for your free estimate</h3><p>Ring us at <a href="tel:+14032832500">(403) 283-2500</a> and tell us about your home and what you need.</p></div>
-      <div class="step rv"><h3>We clean with care</h3><p>Our insured and bonded team arrives ready to take care of your space.</p></div>
-      <div class="step rv"><h3>Enjoy a spotless home</h3><p>Relax in a fresh, clean space. Not happy? Your satisfaction is guaranteed.</p></div>
-    </div>
+    <span class="eyebrow">Our Promise</span>
+    <ul class="prom-list">
+      <li class="rv"><b>Insured &amp; bonded.</b><span>Your home and your peace of mind are covered, every visit.</span></li>
+      <li class="rv"><b>Independent.</b><span>Locally owned in Calgary. No franchise, no call centre.</span></li>
+      <li class="rv"><b>Guaranteed.</b><span>Not happy with something? Call us and we will make it right.</span></li>
+      <li class="rv"><b>Private.</b><span>We never share your information with any other party.</span></li>
+    </ul>
   </div>
 </section>
 
 <!-- GIVING BACK -->
 <section class="giving" id="giving">
-  <div class="wrap">
-    <div class="giving-card rv">
-      <span class="ic"><svg><use href="#i-heart"/></svg></span>
-      <div>
-        <h2>We believe in giving back</h2>
-        <p>We support several charities, and our owner leads an annual youth mission trip to Mexico to build homes for people in need.</p>
-      </div>
-      <a href="#contact" class="btn btn-white">Get in Touch</a>
+  <div class="giving-split">
+    <div class="ph giv-photo"><img src="images/giving-back.jpg" alt="Volunteers building a home" loading="lazy" onerror="this.remove()"></div>
+    <div class="giv-text rv">
+      <span class="eyebrow">Giving Back</span>
+      <h2>Because a home means more than clean floors</h2>
+      <p>We support many charities, and our owner leads an annual youth mission trip to Mexico to build homes for people in need.</p>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
 <section class="reviews" id="reviews">
-  <div class="wrap">
-    <div class="rev-card rv">
-      <div>
-        <div class="rev-stars"><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg></div>
-        <h2>See what our clients say</h2>
-        <p>Read honest reviews from Calgary clients on Google, or share your own experience with us.</p>
-        <div class="rev-btns">
-          <a class="btn btn-coral" href="#" target="_blank" rel="noopener" id="googleReviews">Read Google Reviews</a>
-          <a class="btn btn-line" href="#" target="_blank" rel="noopener" id="googleWrite">Leave a Review</a>
-        </div>
-      </div>
-      <div class="rev-side"><b>A+</b><span>Rated by the Better Business Bureau</span></div>
+  <div class="wrap rev-bar rv">
+    <div class="rev-stars"><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg><svg class="i i-fill"><use href="#i-star"/></svg></div>
+    <h2>Been cleaned by us? Tell Calgary.</h2>
+    <div class="rev-btns">
+      <a class="btn btn-coral" href="#" target="_blank" rel="noopener" id="googleReviews">Read Google reviews</a>
+      <a class="btn btn-line" href="#" target="_blank" rel="noopener" id="googleWrite">Leave a review</a>
     </div>
   </div>
 </section>
@@ -652,6 +737,13 @@ footer a:hover{color:var(--sun)}
 const b=document.getElementById('burger'),m=document.getElementById('menu');
 b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>{x.classList.remove('on');x.setAttribute('aria-selected','false')});
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');t.setAttribute('aria-selected','true');
+  document.querySelector('.panel[data-p="'+t.dataset.t+'"]').classList.add('on');
+}));
 document.getElementById('yr').textContent=new Date().getFullYear();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
